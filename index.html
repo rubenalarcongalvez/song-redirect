@@ -7,11 +7,11 @@
 </head>
 <body>
     <script>
+        let currentMonth = (new Date).getMonth();
         //Thinking Out Loud - Ed Sheeran
         let URL = "https://music.youtube.com/watch?v=fdz_cabS9BU&si=ARz3kOgCjCrD9PqJ";
 
-        //Switch by current month
-        switch ((new Date).getMonth()) {
+        switch (currentMonth) {
             //from 0 to 11
             case 0:
                 //Enero
@@ -72,7 +72,6 @@
                 //Tacones rojos - Morat
                 //Cuando empecé a conocerte mejor y me gustaste más y más
                 URL = "https://music.youtube.com/watch?v=iyl0ocEW7-Q&si=V6lM3bX85yz8sZSk";
-                URL = "https://music.youtube.com/watch?v=teOhAumHNXc&si=NR1Kw2tS8BG5UNhO";
                 break;
             case 10:
                 //Noviembre
@@ -94,6 +93,7 @@
         }
 
         window.location.replace(URL);
+        localStorage.clear(); //Limpiamos para que no quede la misma cancion siempre
     </script>
 </body>
 </html>
